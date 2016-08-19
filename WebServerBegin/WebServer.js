@@ -12,6 +12,7 @@ let mimes = {
     '.png' : 'text/png'
 }
 
+// serve files with nested callbacks
 function webServer(req, res) {
     let baseURI = url.parse(req.url);
     let filepath = __dirname + (baseURI.pathname === '/' ? '/index.htm' : baseURI.pathname);
